@@ -1,2 +1,2 @@
-# BattleBot2
-BattleBots with Limited Ammo
+# BattleBots2_0LimitedAmmo
+BattleBot source code with limited ammo but looting
