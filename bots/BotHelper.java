@@ -23,17 +23,17 @@ public class BotHelper {
 	 * Return the closest dead bot
 	 * 
 	 * TO USE: 
-	 * Make sure to instantiate a BotHelper Object
+	 * Make sure to instantiate a BotHelper Object ** Why?   Made them static - need to test
 	 * call the function of your choice; making sure to send in the appropriate parameters
 	 * ensure you receive the needed info
 	 */
 	
 	//you can also use this to find the y displacement
-	public double calcDisplacement(double botX, double bulletX){
+	public static double calcDisplacement(double botX, double bulletX){
 		return bulletX - botX;
 	}
 	
-	public double calcDistance(double x1, double y1, double x2, double y2){
+	public static double calcDistance(double x1, double y1, double x2, double y2){
 		return Math.sqrt(Math.pow(calcDisplacement(x1,x2), 2)+Math.pow(calcDisplacement(y1,y2), 2));
 	}
 		
@@ -47,7 +47,7 @@ public class BotHelper {
 		return Math.abs(x2 - x1) + Math.abs(y2 - y1);
 	}
 	
-	public Bullet findClosest(BotInfo _me, Bullet[] _bullets){
+	public static Bullet findClosest(BotInfo _me, Bullet[] _bullets){
 		Bullet closest;
 		double distance, closestDist;
 		closest = _bullets[0];
@@ -62,7 +62,7 @@ public class BotHelper {
 		return closest;
 	}
 	
-	public BotInfo findClosest(BotInfo _me, BotInfo[] _bots){
+	public static BotInfo findClosest(BotInfo _me, BotInfo[] _bots){
 		BotInfo closest;
 		double distance, closestDist;
 		closest = _bots[0];

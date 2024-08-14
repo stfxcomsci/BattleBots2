@@ -236,11 +236,11 @@ public class BattleBotArena extends JPanel implements MouseListener, MouseWheelL
 	/**
 	 * Right edge of the screen
 	 */
-	public static final int RIGHT_EDGE = 1200;//1600,1100; //ROWBOTTOM - changed from 700// also arena panel width
+	public static final int RIGHT_EDGE = 800;//1600,1100; //ROWBOTTOM - changed from 700// also arena panel width
 	/**
 	 * Bottom edge of the screen
 	 */
-	public static final int BOTTOM_EDGE = 800;//950,714; //ROWBOTTOM - changed from 500// arena panel height is this constant + TEXT_BUFFER
+	public static final int BOTTOM_EDGE = 600;//950,714; //ROWBOTTOM - changed from 500// arena panel height is this constant + TEXT_BUFFER
 	/**
 	 * Left edge of the screen
 	 */
@@ -299,7 +299,7 @@ public class BattleBotArena extends JPanel implements MouseListener, MouseWheelL
 	 * Total number of Bots in round 1 (if you have fewer than this, the rest of the spots
 	 * in the array will be filled with Drones, RandBots, and Sentries).
 	 */
-	public static final int 	NUM_BOTS = 10;//ROWBOTTOM NOV 6 2017 Changed to 25
+	public static final int 	NUM_BOTS = 2;//ROWBOTTOM NOV 6 2017 Changed to 25
 	/**
 	 * Number of bullets on screen at once for each bot
 	 */
@@ -620,7 +620,7 @@ public class BattleBotArena extends JPanel implements MouseListener, MouseWheelL
 		// *** INSERT PLAYER BOTS HERE. Use any array numbers you like
 		// *** as the bots will be shuffled again later.
 		// *** Any empty spots will be filled with standard arena bots.
-		
+		bots[1] = new ReidBot();
 
 		// *******************************	
 		// Remaining slots filled with Drones, RandBots, and sentryBots.
